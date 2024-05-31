@@ -1,0 +1,16 @@
+main {
+  padding: 2em;
+}
+
+small {
+  color: gray;
+  font-weight: 300;
+}
+
+table {
+  width: 100%;
+}
+
+i {
+  cursor: pointer;
+}

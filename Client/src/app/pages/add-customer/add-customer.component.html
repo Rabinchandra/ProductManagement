@@ -1,0 +1,41 @@
+<main>
+  <small>Dashboard / Customer / Add new Customer</small>
+
+  <h2>Add A New Customer</h2>
+  <form #productForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name: </label>
+      <input
+        id="firstName"
+        name="firstName"
+        [(ngModel)]="customer.firstName"
+        type="text"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="lastName">Last Name: </label>
+      <input
+        id="lastName"
+        name="lastName"
+        [(ngModel)]="customer.lastName"
+        type="text"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="email">Email: </label>
+      <input
+        id="email"
+        name="email"
+        [(ngModel)]="customer.email"
+        type="text"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn-primary">Add a new Product</button>
+  </form>
+</main>

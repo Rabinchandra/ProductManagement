@@ -1,0 +1,56 @@
+<main>
+  <small>Dashboard / Customer</small>
+  <h2>Customer</h2>
+
+  <section class="main-page">
+    <header>
+      <div class="search">
+        <i class="fi fi-rr-search"></i>
+        <input type="text" placeholder="Search in Customer" class="text-sm" />
+      </div>
+      <a class="btn-primary" routerLink="/customer/add-customer">
+        <i class="fi fi-rr-plus"></i> Add Customer
+      </a>
+    </header>
+    <table [cellSpacing]="0" [cellPadding]="10">
+      <thead>
+        <th>Customer ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        @for(c of Customer; track c) {
+        <tr>
+          <td>
+            {{ c.customerId }}
+          </td>
+          <td>
+            {{ c.firstName }}
+          </td>
+          <td>
+            {{ c.lastName }}
+          </td>
+          <td>
+            {{ c.email }}
+          </td>
+          <td>
+            <i
+              class="fi fi-rr-pencil"
+              (click)="onClickEdit(c.customerId || -1)"
+            ></i>
+          </td>
+          <td>
+            <i
+              class="fi fi-rr-trash"
+              (click)="removeCustomer(c.customerId || -1)"
+            ></i>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+</main>

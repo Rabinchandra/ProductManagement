@@ -1,0 +1,54 @@
+<main>
+  <small>Dashboard / Products</small>
+  <h2>Products</h2>
+
+  <section class="main-page">
+    <header>
+      <div class="search">
+        <i class="fi fi-rr-search"></i>
+        <input type="text" placeholder="Search in Product" class="text-sm" />
+      </div>
+      <a class="btn-primary" routerLink="/product/add-product">
+        <i class="fi fi-rr-plus"></i> Add Product
+      </a>
+    </header>
+    <table [cellSpacing]="0" [cellPadding]="10">
+      <thead>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        @for(product of Products; track product) {
+        <tr>
+          <td>
+            {{ product.productId }}
+          </td>
+          <td>
+            {{ product.productName }}
+          </td>
+          <td>
+            {{ product.productDescription }}
+          </td>
+          <td>
+            {{ product.price }}
+          </td>
+          <td>
+            {{ product.stock }}
+          </td>
+          <td>
+            <i class="fi fi-rr-pencil"></i>
+          </td>
+          <td>
+            <i class="fi fi-rr-trash"></i>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+</main>

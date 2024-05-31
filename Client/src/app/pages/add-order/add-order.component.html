@@ -1,0 +1,94 @@
+<main>
+  <small>Dashboard / Products / Add a new product</small>
+
+  <h2>Add A New Order</h2>
+  <form #productForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="customerId">Customer Id:</label>
+      <input
+        id="customerId"
+        name="customerId"
+        [(ngModel)]="order.customerId"
+        type="text"
+        required
+      />
+    </div>
+    <br />
+    <!-- Product 1 -->
+    <section>
+      <h2>Product 1</h2>
+      <div>
+        <label for="productId">Product Id:</label>
+        <input
+          id="productId"
+          name="productId"
+          [(ngModel)]="order.orderDetails[0].productID"
+          type="number"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input
+          id="quantity"
+          name="quantity"
+          [(ngModel)]="order.orderDetails[0].quantity"
+          type="number"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="price">Price:</label>
+        <input
+          id="price"
+          name="price"
+          [(ngModel)]="order.orderDetails[0].price"
+          type="number"
+          required
+        />
+      </div>
+    </section>
+
+    <!-- Product 2 -->
+    <br />
+    <section>
+      <h2>Product 2</h2>
+      <div>
+        <label for="productId">Product Id:</label>
+        <input
+          id="productId"
+          name="productId"
+          [(ngModel)]="order.orderDetails[1].productID"
+          type="number"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input
+          id="quantity"
+          name="quantity"
+          [(ngModel)]="order.orderDetails[1].quantity"
+          type="number"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="price">Price:</label>
+        <input
+          id="price"
+          name="price"
+          [(ngModel)]="order.orderDetails[1].price"
+          type="number"
+          required
+        />
+      </div>
+    </section>
+
+    <button type="submit" class="btn-primary">Add a new Product</button>
+  </form>
+</main>

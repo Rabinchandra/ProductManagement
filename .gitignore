@@ -1,0 +1,74 @@
+# .gitignore for parent directory containing Angular client and ASP.NET Web API server
+
+# Ignore node_modules for Angular
+Client/node_modules/
+Client/dist/
+Client/tmp/
+Client/out-tsc/
+Client/.angular/
+Client/.cache/
+Client/.env
+
+# Ignore Angular generated files
+Client/.angular/cache/
+Client/.angular/cache/
+
+# Ignore log files
+Client/npm-debug.log*
+Client/yarn-debug.log*
+Client/yarn-error.log*
+
+# Ignore coverage directory
+Client/coverage/
+
+# Ignore environment configuration files
+Client/src/environments/environment*.ts
+
+# Ignore build artifacts for ASP.NET
+Server/bin/
+Server/obj/
+Server/publish/
+
+# Ignore user-specific files for ASP.NET
+Server/.vs/
+Server/*.user
+Server/*.suo
+
+# Ignore Visual Studio Code workspace settings
+.vscode/
+Client/.vscode/
+Server/.vscode/
+
+# Ignore Rider IDE workspace settings
+.idea/
+Client/.idea/
+Server/.idea/
+
+# Ignore build output for ASP.NET
+Server/build/
+Server/deploy/
+
+# Ignore temporary files for ASP.NET
+Server/*.log
+Server/*.DS_Store
+Server/*.swp
+
+# Ignore NuGet packages
+Server/packages/
+Server/*.nupkg
+Server/*.snupkg
+Server/nuget.exe
+
+# Ignore secrets files
+Server/appsettings.*.json
+
+# Ignore runtime directories
+Server/Properties/PublishProfiles/
+Server/.vs/
+
+# Ignore additional files
+Server/*.userosscache
+Server/*.sln.docstates
+
+# Ignore macOS system files
+.DS_Store

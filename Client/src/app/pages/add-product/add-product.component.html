@@ -1,0 +1,52 @@
+<main>
+  <small>Dashboard / Products / Add a new product</small>
+
+  <h2>Add A New Product</h2>
+  <form #productForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="productName">Product Name:</label>
+      <input
+        id="productName"
+        name="productName"
+        [(ngModel)]="product.productName"
+        type="text"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="productDescription">Product Description:</label>
+      <textarea
+        id="productDescription"
+        name="productDescription"
+        [(ngModel)]="product.productDescription"
+      ></textarea>
+    </div>
+
+    <div>
+      <label for="price">Price:</label>
+      <input
+        id="price"
+        name="price"
+        [(ngModel)]="product.price"
+        type="number"
+        required
+        min="0"
+      />
+    </div>
+
+    <div>
+      <label for="stock">Stock:</label>
+      <input
+        id="stock"
+        name="stock"
+        [(ngModel)]="product.stock"
+        type="number"
+        required
+        min="0"
+      />
+    </div>
+
+    <button type="submit" class="btn-primary">Add a new Product</button>
+  </form>
+</main>

@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+* {
+  font-family: "Noto Sans";
+}
+
+.body-wrapper {
+  display: flex;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-primary {
+  background: rgb(75, 106, 246);
+  padding: 12px;
+  color: #fff;
+  outline: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.main-page > header {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 2em; */
+}
+
+.search {
+  border: 1px solid #ddd;
+  padding: 4px 12px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.search i {
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.search input {
+  display: block;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.main-page table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main-page table th {
+  font-weight: bold;
+  padding: 8px;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+}
+
+.main-page table thead {
+  background: #eee;
+}
+
+.main-page table tr {
+  font-weight: 300;
+  text-align: center;
+}
+
+.main-page table td {
+  font-size: 14px;
+}

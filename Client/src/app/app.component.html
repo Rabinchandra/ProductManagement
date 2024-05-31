@@ -1,0 +1,22 @@
+<div class="body-wrapper">
+  <aside>
+    <h1>tuks</h1>
+    <p>Menu</p>
+    <ul>
+      <li (click)="onChangeTab(0)" [ngClass]="{ active: activeTabIndex == 0 }">
+        <a routerLink="product"><i class="'fi fi-tr-box-open"></i> Products</a>
+      </li>
+      <li (click)="onChangeTab(1)" [ngClass]="{ active: activeTabIndex == 1 }">
+        <a routerLink="customer"><i class="fi fi-rr-user"></i> Customer</a>
+      </li>
+      <li (click)="onChangeTab(2)" [ngClass]="{ active: activeTabIndex == 2 }">
+        <a routerLink="order"
+          ><i class="fi fi-tr-cart-shopping-fast"></i> Order</a
+        >
+      </li>
+    </ul>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
