@@ -6,6 +6,7 @@ import { AddOrderComponent } from './pages/add-order/add-order.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { AddCustomerComponent } from './pages/add-customer/add-customer.component';
 import { EditCustomerComponent } from './pages/edit-customer/edit-customer.component';
+import { EditOrderComponent } from './pages/edit-order/edit-order.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,9 @@ export const routes: Routes = [
   {
     path: 'customer/edit-customer',
     component: EditCustomerComponent,
+  },
+  {
+    path: 'order/edit-order',
+    component: EditOrderComponent,
   },
 ];

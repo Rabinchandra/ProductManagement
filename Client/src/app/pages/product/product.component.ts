@@ -15,11 +15,7 @@ export class ProductComponent {
 
   constructor(private productService: ProductService) {}
 
-  ngOnInit() {
-    // this.products = this.productService.getAllProducts();
-  }
-
   get Products(): IProduct[] {
-    return this.productService.getAllProducts();
+    return this.productService.products;
   }
 }

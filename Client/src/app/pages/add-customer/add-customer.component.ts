@@ -30,6 +30,10 @@ export class AddCustomerComponent {
           return throwError(err);
         })
       )
-      .subscribe((c) => alert('Added Customer!'));
+      .subscribe((c) => {
+        alert('Added Customer!');
+
+        this.customerService.customers.push(c);
+      });
   }
 }

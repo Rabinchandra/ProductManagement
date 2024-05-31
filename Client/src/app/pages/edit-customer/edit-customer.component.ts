@@ -24,6 +24,8 @@ export class EditCustomerComponent {
   }
 
   onSubmit() {
-    this.customerService.editCustomer(this.customer);
+    this.customerService
+      .editCustomer(this.customer)
+      .subscribe(() => alert('Updated Sucessfully'));
   }
 }

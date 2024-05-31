@@ -151,3 +151,4 @@ C:\Users\rabinyen\Desktop\Web_API_Assignment\ProductManagement\Server\Server\bin
 C:\Users\rabinyen\Desktop\Web_API_Assignment\ProductManagement\Server\Server\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\rabinyen\Desktop\Web_API_Assignment\ProductManagement\Server\Server\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\rabinyen\Desktop\Web_API_Assignment\ProductManagement\Server\Server\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\rabinyen\Desktop\Web_API_Assignment\ProductManagement\Server\Server\obj\Debug\net8.0\Server.sourcelink.json

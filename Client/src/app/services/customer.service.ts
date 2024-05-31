@@ -20,7 +20,6 @@ export class CustomerService {
   constructor(private http: HttpClient) {
     this.getAllCustomers().subscribe((result) => {
       this.customers = result;
-      console.log(result);
     });
   }
 
@@ -48,5 +47,29 @@ export class CustomerService {
 
   editCustomer(editedCustomer: ICustomer) {
     console.log(editedCustomer);
+
+    const patchbody = [
+      {
+        path: '/firstName',
+        op: 'replace',
+        value: editedCustomer.firstName,
+      },
+      {
+        path: '/lastName',
+        op: 'replace',
+        value: editedCustomer.lastName,
+      },
+      {
+        path: '/email',
+        op: 'replace',
+        value: editedCustomer.email,
+      },
+    ];
+
+    return this.http.patch(
+      this.apiUrl + '/' + editedCustomer.customerId,
+      JSON.stringify(patchbody),
+      this.httpOptions
+    );
   }
 }

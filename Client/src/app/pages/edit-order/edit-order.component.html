@@ -1,1 +1,35 @@
-<p>edit-order works!</p>
+<main>
+  <small>Dashboard / Products / Edit</small>
+
+  <h2>Edit Order</h2>
+  <form #productForm="ngForm" (ngSubmit)="onSubmit()">
+    <!-- Product 1 -->
+    <section>
+      <h2>Order Detail ID - {{ order.orderDetailId }}</h2>
+      <br />
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input
+          id="quantity"
+          name="quantity"
+          [(ngModel)]="order.quantity"
+          type="number"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="price">Price:</label>
+        <input
+          id="price"
+          name="price"
+          [(ngModel)]="order.price"
+          type="number"
+          required
+        />
+      </div>
+    </section>
+
+    <button type="submit" class="btn-primary">Save the changes</button>
+  </form>
+</main>

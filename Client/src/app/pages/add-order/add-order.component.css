@@ -25,3 +25,7 @@ label {
   display: block;
   margin-bottom: 15px;
 }
+
+i {
+  cursor: pointer;
+}

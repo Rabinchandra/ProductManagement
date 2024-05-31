@@ -8,10 +8,14 @@ import { HttpClient } from '@angular/common/http';
 export class ProductService {
   products: IProduct[] = [];
 
-  constructor() {}
+  private apiUrl = 'https://localhost:7016/api/product';
 
-  getAllProducts(): IProduct[] {
-    return this.getAllProducts();
+  constructor(private http: HttpClient) {
+    this.getAllProducts().subscribe((result) => (this.products = result));
+  }
+
+  getAllProducts() {
+    return this.http.get<IProduct[]>(this.apiUrl);
   }
 
   addProduct(newProduct: IProduct) {

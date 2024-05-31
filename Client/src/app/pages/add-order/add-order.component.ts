@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { OrderService } from '../../services/order.service';
+import { INewOrderDTO } from '../../../interface/interfaces';
 
 @Component({
   selector: 'app-add-order',
@@ -10,24 +12,28 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './add-order.component.css',
 })
 export class AddOrderComponent {
-  order = {
+  order: INewOrderDTO = {
     customerId: 4,
-    orderDate: '2024-05-25',
+    orderDate: '2024-05-20',
     orderDetails: [
       {
-        productID: 1,
+        productId: 1,
+        price: 20,
         quantity: 2,
-        price: 10,
       },
       {
-        productID: 2,
-        quantity: 1,
+        productId: 2,
         price: 20,
+        quantity: 2,
       },
     ],
   };
 
+  constructor(private orderService: OrderService) {}
+
   onSubmit() {
-    console.log(this.order);
+    this.orderService
+      .addOrder(this.order)
+      .subscribe((result) => alert('Added!'));
   }
 }

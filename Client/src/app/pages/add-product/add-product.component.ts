@@ -19,9 +19,7 @@ export class AddProductComponent {
     stock: 0,
   };
 
-  constructor(private productService: ProductService) {
-    
-  }
+  constructor(private productService: ProductService) {}
 
   onSubmit() {
     this.productService.addProduct(this.product);

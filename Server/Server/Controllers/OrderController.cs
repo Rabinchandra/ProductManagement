@@ -20,9 +20,9 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> GetAllOrders()
+        public async Task<ActionResult<IEnumerable<OrderDetail>>> GetAllOrders()
         {
-            return await _context.Orders.ToListAsync();
+            return await _context.OrderDetails.ToListAsync();
         }
 
         [HttpPost]

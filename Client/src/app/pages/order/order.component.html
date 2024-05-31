@@ -14,10 +14,11 @@
     </header>
     <table [cellSpacing]="0" [cellPadding]="10">
       <thead>
+        <th>Order Detail ID</th>
         <th>Order ID</th>
-        <th>Customer Name</th>
-        <th>Order Date</th>
-        <th>Total</th>
+        <th>Product Id</th>
+        <th>Quantity</th>
+        <th>Price</th>
         <th></th>
         <th></th>
       </thead>
@@ -25,22 +26,31 @@
         @for(order of Orders; track order) {
         <tr>
           <td>
+            {{ order.orderDetailId }}
+          </td>
+          <td>
             {{ order.orderId }}
           </td>
           <td>
-            {{ order.customerId }}
+            {{ order.productId }}
           </td>
           <td>
-            {{ order.orderDate }}
+            {{ order.quantity }}
           </td>
           <td>
-            {{ order.total }}
+            {{ order.price }}
           </td>
           <td>
-            <i class="fi fi-rr-pencil"></i>
+            <i
+              class="fi fi-rr-pencil"
+              (click)="updateOrder(order.orderDetailId || -1)"
+            ></i>
           </td>
           <td>
-            <i class="fi fi-rr-trash"></i>
+            <i
+              class="fi fi-rr-trash"
+              (click)="removeOrder(order.orderId || -1)"
+            ></i>
           </td>
         </tr>
         }
